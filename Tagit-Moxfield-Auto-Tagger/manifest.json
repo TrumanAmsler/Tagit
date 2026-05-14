@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Tagit - Moxfield Auto Tagger",
+  "description": "Automatically suggests and applies purpose tags for Moxfield Magic: The Gathering decks.",
+  "version": "0.1.0",
+  "permissions": ["clipboardWrite", "storage"],
+  "host_permissions": [
+    "https://moxfield.com/*",
+    "https://www.moxfield.com/*",
+    "https://api2.moxfield.com/*",
+    "https://api.scryfall.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "32": "assets/icons/icon-32.png",
+    "48": "assets/icons/icon-48.png",
+    "128": "assets/icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://moxfield.com/decks/*", "https://www.moxfield.com/decks/*"],
+      "js": ["src/content.js"],
+      "css": ["src/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/icons/icon-48.png", "assets/tagitlogo.png"],
+      "matches": ["https://moxfield.com/*", "https://www.moxfield.com/*"]
+    }
+  ],
+  "action": {
+    "default_title": "Tagit",
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon-16.png",
+      "32": "assets/icons/icon-32.png",
+      "48": "assets/icons/icon-48.png",
+      "128": "assets/icons/icon-128.png"
+    }
+  }
+}
