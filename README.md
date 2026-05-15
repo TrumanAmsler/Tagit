@@ -1,4 +1,3 @@
-<img width="1254" height="1254" alt="tagitlogo" src="https://github.com/user-attachments/assets/10e0db98-5d04-487f-a61e-da48d985fb4a" />
 # Tagit - Moxfield Auto Tagger
 
 Tagit is a Chrome/Edge browser extension that analyzes a Moxfield Magic: The Gathering deck and generates Moxfield Bulk Edit lines with purpose tags.
