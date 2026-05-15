@@ -11,7 +11,7 @@ Tagit does not ask for your Moxfield login and does not call private write endpo
 1. Open `chrome://extensions` or `edge://extensions`.
 2. Enable Developer mode.
 3. Choose Load unpacked.
-4. Select this folder: `C:\Users\awpch\OneDrive\Desktop\Tagit`.
+4. Select the downloaded unzipped file.
 
 If you are using the zip file, unzip it first. Browsers cannot load the packed `.zip` through Load unpacked.
 
